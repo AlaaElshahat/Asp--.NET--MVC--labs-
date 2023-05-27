@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "UpdateCouursesList";
+}
+
+<h1>UpdateCouursesList</h1>
+<form method="post">
+   <input  name="id" value="@ViewBag.id" />
+    <div>
+        <h3>Courses in department</h3>
+        <select name="coursetoRemove" asp-items="ViewBag.DeptCourses"multiple></select>
+    </div>
+    <div>
+        <h3>Courses Not in department</h3>
+        <select name="coursetoAdd" asp-items="ViewBag.NotDeptCourses" multiple></select>
+    </div>
+    <input  type="submit" value="Update"/>
+</form>
+
